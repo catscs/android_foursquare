@@ -1,0 +1,32 @@
+buildscript {
+    apply  from: '../dependencies.gradle'
+}
+plugins {
+    id 'java-library'
+    id 'kotlin'
+    id 'kotlin-kapt'
+}
+
+dependencies {
+    // Modules
+    implementation project(':data')
+
+
+    //implementation fileTree(dir: 'libs', include: ['*.jar']) //TODO: Check if needed
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
+
+    implementation Libraries.runtimeKtx
+
+
+    // DI
+    implementation DaggerHiltLibraries.hiltAndroid
+    kapt DaggerHiltLibraries.hiltAndroidCompiler
+
+    // Testing
+    testImplementation TestLibraries.junit
+    testImplementation TestLibraries.mockito
+    testImplementation TestLibraries.mockitoKotlin
+    testImplementation TestLibraries.mockitoInline
+    testImplementation TestLibraries.coreTesting
+    testImplementation TestLibraries.kotlinxCoroutines
+}
