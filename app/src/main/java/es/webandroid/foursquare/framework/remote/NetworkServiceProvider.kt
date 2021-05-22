@@ -17,8 +17,8 @@ class NetworkServiceProvider {
         private const val PARAM_VERSION = "v"
         private const val VERSION = "20201119"
         private const val BASE_URL_FOURSQUARE = "https://api.foursquare.com/v2/"
-        private const val FOURSQUARE_CLIENT_ID = "DQ21UKRFE0GUZN5M3SCG51EGFOSEMG53WV1PA3WZBA351BEL"
-        private const val FOURSQUARE_CLIENT_SECRET = "VWMSJMQNM0KMVCCKFGOJJE12A4QPAR0BRAENZASLMTQ4DADW"
+        private const val FOURSQUARE_CLIENT_ID = ""
+        private const val FOURSQUARE_CLIENT_SECRET = ""
     }
 
     private fun client(): OkHttpClient {
